@@ -1,5 +1,16 @@
-function fetchBooks() {
+// function fetchBooks() {
+//   fetch('https://anapioficeandfire.com/api/books').then(function(response){
+//      response.json()
+//   }).then(function(json){
+//      renderBooks(json)
+//   })
+// }
+// WHY DOES THE ABOVE CODE NO WORK
 
+function fetchBooks() {
+  return fetch('https://anapioficeandfire.com/api/books')
+  .then(response => response.json())
+  .then(json => renderBooks(json)); 
 }
 
 function renderBooks(books) {
